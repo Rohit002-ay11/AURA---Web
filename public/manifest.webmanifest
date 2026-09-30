@@ -1,0 +1,9 @@
+{
+  "name": "AURA — Virtual Teacher",
+  "short_name": "AURA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080a10",
+  "theme_color": "#0b0d13",
+  "description": "An interactive AI teacher with dynamic visual explanations."
+}
