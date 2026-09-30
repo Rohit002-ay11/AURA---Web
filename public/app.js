@@ -34,6 +34,14 @@ async function start(){
         video.srcObject=new MediaStream([track.mediaStreamTrack]);
         wrap.classList.add('connected');
       }
+      if(track.kind===LivekitClient.Track.Kind.Audio){
+        const audio=document.querySelector('#remoteAudio');
+        audio.srcObject=new MediaStream([track.mediaStreamTrack]);
+        audio.autoplay=true;
+        audio.playsInline=true;
+        audio.muted=false;
+        audio.play().catch(console.error);
+      }
     });
 
     room.on(LivekitClient.RoomEvent.ParticipantConnected,()=>{
